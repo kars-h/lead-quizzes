@@ -78,7 +78,7 @@ $(document).ready(function () {
             $('#q3-female').delay(600).fadeIn(500);
         }
     });
-    $('#q2-male  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
+    $('#q2-male  > .button_wrappler  > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
         if (answer == "A") {
@@ -104,7 +104,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#q3-male  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
+    $('#q3-male  > .button_wrappler  > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
         if (answer == "A") {
@@ -123,7 +123,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#q4-male  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
+    $('#q4-male  > .button_wrappler > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
         if (answer == "A") {
