@@ -33,7 +33,7 @@ $(document).ready(function () {
  
 
 
-    $('#btn-back').click(function() {
+    $('.back-button').click(function() {
         /*$($('#new_back').attr('value')).fadeOut(500);
         $($('#old_back').attr('value')).delay(600).fadeIn(500);*/
         
