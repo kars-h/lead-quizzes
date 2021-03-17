@@ -39,7 +39,7 @@ $(document).ready(function () {
         
        /* alert($('#new_back').val());
                 alert('fsa');*/
-
+        $('#old_back > .back-button').addClass("back-button-disabled");
     }); 
 
     //fades in out
