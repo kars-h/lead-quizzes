@@ -32,9 +32,14 @@ $(document).ready(function () {
 
 
 
+    var old_back = '';
+    var new_back = '';
 
 
-
+    $('#btn-back').click(function(){
+        $(new_back).fadeOut(500);
+        $(old_back).delay(600).fadeIn(500);
+    }); 
 
     //fades in out
 
@@ -53,12 +58,20 @@ $(document).ready(function () {
         if (answer == "Male") {
             $('#q1').fadeOut(500);
             $('#q2-male').delay(600).fadeIn(500);
+            
             $('#profile_gender').val("M");
+            
+            old_back = '#q1';
+            new_back = '#q2-male';
         }
         if (answer == "Female") {
             $('#q1').fadeOut(500);
             $('#q2-female').delay(600).fadeIn(500);
+            
             $('#profile_gender').val("F");
+            
+            old_back = '#q1';
+            new_back = '#q2-female';
         }
     });
 
@@ -70,14 +83,23 @@ $(document).ready(function () {
             $('#rtwo').delay(1100).fadeIn(500);
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile B (with warning)");
+            
+            old_back = '#q2-female';
+            
         }
         if (answer == "B") {
             $('#q2-female').fadeOut(500);
             $('#q4-female').delay(600).fadeIn(500);
+            
+            old_back = '#q2-female';
+            new_back = '#q4-female';
         }
         if (answer == "C") {
             $('#q2-female').fadeOut(500);
             $('#q3-female').delay(600).fadeIn(500);
+            
+            old_back = '#q2-female';
+            new_back = '#q3-female';
         }
     });
     $('#q2-male  > .button_wrappler  > .btn').click(function () {
@@ -89,6 +111,9 @@ $(document).ready(function () {
             /*$('#rfour').delay(1100).fadeIn(500);
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile C");*/
+            
+            old_back = '#q2-male';
+            new_back = '#q3-male';
         }
         if (answer == "B") {
             $('#q2-male').fadeOut(500);
@@ -96,6 +121,9 @@ $(document).ready(function () {
             /*$('#rfour').delay(1100).fadeIn(500);
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile C");*/
+            
+            old_back = '#q2-male';
+            new_back = '#q3-male';
         }
         if (answer == "C") {
             $('#q2-male').fadeOut(500);
@@ -103,6 +131,9 @@ $(document).ready(function () {
             $('#rfour').delay(1100).fadeIn(500);
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile C");
+            
+            old_back = '#q2-male';
+            
         }
     });
 
@@ -114,14 +145,22 @@ $(document).ready(function () {
             $('#rfive').delay(1100).fadeIn(500);
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile A");
+            
+            old_back = '#q3-male';
         }
         if (answer == "B") {
             $('#q3-male').fadeOut(500);
             $('#q4-male').delay(600).fadeIn(500);
+            
+            old_back = '#q3-male';
+            new_back = '#q4-male';
         }
         if (answer == "C") {
             $('#q3-male').fadeOut(500);
             $('#q4-male').delay(600).fadeIn(500);
+            
+            old_back = '#q3-male';
+            new_back = '#q4-male';
         }
     });
 
@@ -133,18 +172,24 @@ $(document).ready(function () {
             $('#rfour').delay(1100).fadeIn(500);
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile C");
+            
+            old_back = '#q4-male';
         }
         if (answer == "B") {
             $('#q4-male').fadeOut(500);
             $('#rsix').delay(1100).fadeIn(500);
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile D");
+            
+            old_back = '#q4-male';
         }
         if (answer == "C") {
             $('#q4-male').fadeOut(500);
             $('#rsix').delay(1100).fadeIn(500);
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile D");
+            
+            old_back = '#q4-male';
 
         }
     });
@@ -156,10 +201,16 @@ $(document).ready(function () {
         if (answer == "Yes") {
             $('#q3-female').fadeOut(500);
             $('#q2-male').delay(600).fadeIn(500);
+            
+            old_back = '#q3-female';
+            new_back = '#q2-male';
         }
         if (answer == "No") {
             $('#q3-female').fadeOut(500);
             $('#q4-female').delay(600).fadeIn(500);
+            
+            old_back = '#q3-female';
+            new_back = '#q4-female';
         }
     });
 
@@ -171,16 +222,21 @@ $(document).ready(function () {
             $('#rthree').delay(1100).fadeIn(500);
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile B");
+            
+            old_back = '#q4-female';
+
         }
         if (answer == "No") {
             $('#q4-female').fadeOut(500);
             $('#rtwo').delay(1100).fadeIn(500);
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile B (with warning)");
+            
+            old_back = '#q4-female';
         }
     });
 
-    $('#q5  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
+    /*$('#q5  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         $('#q5').fadeOut(500);
         $('#q6').delay(600).fadeIn(500);
     });
@@ -209,14 +265,14 @@ $(document).ready(function () {
     $('#q10  > .btn').click(function () {
         $('#q10').fadeOut(500);
         $('#calc').delay(600).fadeIn(500);
-    });
+    });*/
 
     //add questions
-
+/*
     $('#calc  > .submit').click(function () {
         $('#calc').fadeOut(500);
         $('#results').delay(600).fadeIn(500);
-    });
+    });*/
     //}
 
     // Restart button
@@ -227,7 +283,7 @@ $(document).ready(function () {
 
 
     //START RESULTS DISPLAY
-
+/*
     $('#calc .submit').click(function () {
 
         $('#calc').fadeOut(1000);
@@ -265,7 +321,7 @@ $(document).ready(function () {
             // console.log(whichIsTheGreatest(obj)); // 'a'
             delete obj[maxName];
             i++;
-        }
+        }*/
         /*
                 function whichIsTheGreatestTHIRD(obj) {
         
