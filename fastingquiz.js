@@ -395,7 +395,7 @@ $(document).ready(function () {
         $('#rintro').delay(1100).fadeIn(500);*/
 
 
-    });
+    //});
 
 
 });
