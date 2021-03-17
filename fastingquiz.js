@@ -33,11 +33,13 @@ $(document).ready(function () {
  
 
 
-    $('#btn-back').click(function(){
+    $('#btn-back').click(function() {
         /*$($('#new_back').attr('value')).fadeOut(500);
         $($('#old_back').attr('value')).delay(600).fadeIn(500);*/
         
-        alert($('#new_back').attr('value'));
+        alert($('#new_back').val());
+                alert('fsa');
+
     }); 
 
     //fades in out
