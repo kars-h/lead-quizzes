@@ -53,12 +53,12 @@ $(document).ready(function () {
         if (answer == "Male") {
             $('#q1').fadeOut(500);
             $('#q2-male').delay(600).fadeIn(500);
-            $('#profile_gender').val(answer);
+            $('#profile_gender').val("M");
         }
         if (answer == "Female") {
             $('#q1').fadeOut(500);
             $('#q2-female').delay(600).fadeIn(500);
-            $('#profile_gender').val(answer);
+            $('#profile_gender').val("F");
         }
     });
 
