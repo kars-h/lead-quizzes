@@ -46,7 +46,7 @@ $(document).ready(function () {
         $('#q1').delay(600).fadeIn(500);
     });
 
-     $('#q1 > .button_wrappler > .btn').click(function () {
+     $('#q1 > .button_wrappler  > .choice-wrapper > .btn').click(function () {
 
         var answer = $(this).attr("data-m1");
 
@@ -60,7 +60,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#q2-female  > .button_wrappler > .btn').click(function () {
+    $('#q2-female  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
         if (answer == "A") {
@@ -78,7 +78,7 @@ $(document).ready(function () {
             $('#q3-female').delay(600).fadeIn(500);
         }
     });
-    $('#q2-male  > .button_wrappler > .btn').click(function () {
+    $('#q2-male  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
         if (answer == "A") {
@@ -104,7 +104,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#q3-male  > .button_wrappler > .btn').click(function () {
+    $('#q3-male  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
         if (answer == "A") {
@@ -123,7 +123,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#q4-male  > .button_wrappler > .btn').click(function () {
+    $('#q4-male  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
         if (answer == "A") {
@@ -148,7 +148,7 @@ $(document).ready(function () {
     });
 
 
-    $('#q3-female  > .button_wrappler > .btn').click(function () {
+    $('#q3-female  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
         if (answer == "Yes") {
@@ -161,7 +161,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#q4-female  > .button_wrappler > .btn').click(function () {
+    $('#q4-female  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
         if (answer == "Yes") {
@@ -178,7 +178,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#q5  > .button_wrappler > .btn').click(function () {
+    $('#q5  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         $('#q5').fadeOut(500);
         $('#q6').delay(600).fadeIn(500);
     });
