@@ -23,7 +23,7 @@ $(document).ready(function () {
     //logic(answer)
 
 
-    console.log(meta);
+   // console.log(meta);
     //add blocks to add variables
 
     //});
@@ -38,9 +38,9 @@ $(document).ready(function () {
 
     //fades in out
 
-    $('#intro > .btnintro').click(function () {
+    $('.div-block-11 > .btnintro').click(function () {
 
-        var answer = $(this).attr("data-m1");
+       // var answer = $(this).attr("data-m1");
 
         $('#intro').fadeOut(500);
         $('#q1').delay(600).fadeIn(500);
