@@ -32,7 +32,7 @@ $(document).ready(function () {
 
  
 
-
+//breid uit door voor alle vragen die je beantwoordt de waardes op te slaan, wat ook misschien makkelijker maakt om naar ac te sturen
     $('.back-button').click(function() {
         $($('#new_back').attr('value')).fadeOut(500);
         $($('#old_back').attr('value')).delay(600).fadeIn(500);
@@ -41,6 +41,9 @@ $(document).ready(function () {
                 alert('fsa');*/
         $($('#old_back').attr('value')+' >  .button_wrappler  > .back-button').addClass("back-button-disabled");
     }); 
+    
+    
+    
 
     //fades in out
 
