@@ -380,7 +380,7 @@ $(document).ready(function () {
         
         */
 
-        if (results.indexOf("One") > -1) {
+       /* if (results.indexOf("One") > -1) {
             $('#rone').delay(1100).fadeIn(500);
         } if (results.indexOf("Two") > -1) {
             $('#rtwo').delay(1100).fadeIn(500);
@@ -392,7 +392,7 @@ $(document).ready(function () {
             $('#rfive').delay(1100).fadeIn(500);
         }
         //add variables add results
-        $('#rintro').delay(1100).fadeIn(500);
+        $('#rintro').delay(1100).fadeIn(500);*/
 
 
     });
