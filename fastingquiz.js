@@ -44,6 +44,28 @@ var new_back = [
        /* alert($('#new_back').val());
                 alert('fsa');*/
         //$($('#old_back').attr('value')+' >  .button_wrappler  > .back-button').addClass("back-button-disabled");
+        
+        
+        var old_back_lengtharray = old_back.length - 1 ;
+        var new_back_lengtharray = new_back.length - 1 ;
+        
+        alert("old_back: "+old_back[old_back_lengtharray]);
+        alert("old_back2: "+old_back[old_back_lengtharray - 1]);
+        
+        alert("new_back: "+new_back[new_back_lengtharray]);
+        alert("new_back2: "+new_back[new_back_lengtharray - 1]);
+
+        old_back.pop();
+        new_back.pop();
+
+        var old_back_lengtharray = old_back.length - 1 ;
+        var new_back_lengtharray = new_back.length - 1 ;
+        
+         alert("old_back: "+old_back[old_back_lengtharray]);
+        alert("old_back2: "+old_back[old_back_lengtharray - 1]);
+        
+        alert("new_back: "+new_back[new_back_lengtharray]);
+        alert("new_back2: "+new_back[new_back_lengtharray - 1]);
     }); 
     
     
