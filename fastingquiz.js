@@ -127,8 +127,12 @@ var answers = [
 
     $('#q2-female  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         var answer = $(this).attr("data-m1");
-        console.log($(this).text);
-        console.log($(this).text());
+        
+        var answer_send = $(this).text();
+        $('#body_weight').val(answer_send);
+        
+        
+        
         if (answer == "A") {
             $('#q2-female').fadeOut(500);
             $('#rtwo').delay(1100).fadeIn(500);
@@ -165,6 +169,9 @@ var answers = [
     $('#q2-male  > .button_wrappler  > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
+        var answer_send = $(this).text();
+        $('#talk_schedule').val(answer_send);
+        
         if (answer == "A") {
             $('#q2-male').fadeOut(500);
             $('#q3-male').delay(600).fadeIn(500);
@@ -212,6 +219,9 @@ var answers = [
     $('#q3-male  > .button_wrappler  > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
+         var answer_send = $(this).text();
+        $('#fasted_before').val(answer_send);
+        
         if (answer == "A") {
             $('#q3-male').fadeOut(500);
             $('#rfive').delay(1100).fadeIn(500);
@@ -253,6 +263,9 @@ var answers = [
     $('#q4-male  > .button_wrappler > .btn').click(function () {
         var answer = $(this).attr("data-m1");
 
+         var answer_send = $(this).text();
+        $('#how_fastfast_sound').val(answer_send);
+        
         if (answer == "A") {
             $('#q4-male').fadeOut(500);
             $('#rfour').delay(1100).fadeIn(500);
@@ -289,6 +302,9 @@ var answers = [
 
     $('#q3-female  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         var answer = $(this).attr("data-m1");
+        
+        var answer_send = $(this).text();
+        $('#post_menopausal').val(answer_send);
 
         if (answer == "Yes") {
             $('#q3-female').fadeOut(500);
@@ -318,6 +334,9 @@ var answers = [
 
     $('#q4-female  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         var answer = $(this).attr("data-m1");
+        
+        var answer_send = $(this).text();
+        $('#menstrual_cycle_normal').val(answer_send);
 
         if (answer == "Yes") {
             $('#q4-female').fadeOut(500);
