@@ -58,14 +58,17 @@ var new_back = [
         alert("old_back: "+old_back);
         alert("new_back: "+new_back);
         
+        $(new_back[new_back_lengtharray]).fadeOut(500);
+        $(old_back[old_back_lengtharray]).delay(600).fadeIn(500);
+        
         old_back.pop();
         new_back.pop();
 
-        var old_back_lengtharray = old_back.length - 1 ;
+      /*  var old_back_lengtharray = old_back.length - 1 ;
         var new_back_lengtharray = new_back.length - 1 ;
         
         alert("popped old_back: "+old_back);
-        alert("popped new_back: "+new_back);
+        alert("popped new_back: "+new_back);*/
         
         /* alert("old_back: "+old_back[old_back_lengtharray]);
         alert("old_back2: "+old_back[old_back_lengtharray - 1]);
