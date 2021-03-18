@@ -41,25 +41,13 @@ var answers = [
 
 //breid uit door voor alle vragen die je beantwoordt de waardes op te slaan, wat ook misschien makkelijker maakt om naar ac te sturen
     $('.back-button').click(function() {
-        /*$($('#new_back').attr('value')).fadeOut(500);
-        $($('#old_back').attr('value')).delay(600).fadeIn(500);*/
         
-       /* alert($('#new_back').val());
-                alert('fsa');*/
-        //$($('#old_back').attr('value')+' >  .button_wrappler  > .back-button').addClass("back-button-disabled");
         
         
         var old_back_lengtharray = old_back.length - 1 ;
         var new_back_lengtharray = new_back.length - 1 ;
         
-       /* alert("old_back: "+old_back[old_back_lengtharray]);
-        alert("old_back2: "+old_back[old_back_lengtharray - 1]);
         
-        alert("new_back: "+new_back[new_back_lengtharray]);
-        alert("new_back2: "+new_back[new_back_lengtharray - 1]);*/
-
-       /* alert("old_back: "+old_back);
-        alert("new_back: "+new_back);*/
         
         $(new_back[new_back_lengtharray]).fadeOut(500);
         $(old_back[old_back_lengtharray]).delay(600).fadeIn(500);
@@ -67,17 +55,7 @@ var answers = [
         old_back.pop();
         new_back.pop();
 
-      /*  var old_back_lengtharray = old_back.length - 1 ;
-        var new_back_lengtharray = new_back.length - 1 ;
-        
-        alert("popped old_back: "+old_back);
-        alert("popped new_back: "+new_back);*/
-        
-        /* alert("old_back: "+old_back[old_back_lengtharray]);
-        alert("old_back2: "+old_back[old_back_lengtharray - 1]);
-        
-        alert("new_back: "+new_back[new_back_lengtharray]);
-        alert("new_back2: "+new_back[new_back_lengtharray - 1]);*/
+       
     }); 
     
     
@@ -103,6 +81,13 @@ var answers = [
             
             $('#profile_gender').val("M");
             
+            $('#body_weight').val("");
+            $('#post_menopausal').val("");
+            $('#menstrual_cycle_normal').val("");
+
+            
+            
+            
            /* $('#old_back').val("#q1");
             $('#new_back').val("#q2-male");*/
             
@@ -116,6 +101,11 @@ var answers = [
             $('#q2-female').delay(600).fadeIn(500);
             
             $('#profile_gender').val("F");
+            
+            $('#talk_schedule').val("");
+            $('#fasted_before').val("");
+            $('#how_fastfast_sound').val("");
+
             
          /*   $('#old_back').val("#q1");
             $('#new_back').val("#q2-female");*/
