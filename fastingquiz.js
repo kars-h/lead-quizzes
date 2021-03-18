@@ -127,8 +127,8 @@ var answers = [
 
     $('#q2-female  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         var answer = $(this).attr("data-m1");
-        console.log($(this));
-        
+        console.log($(this).text);
+        console.log($(this).text());
         if (answer == "A") {
             $('#q2-female').fadeOut(500);
             $('#rtwo').delay(1100).fadeIn(500);
