@@ -131,7 +131,7 @@ var new_back = [
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile B (with warning)");
             
-            
+            alert(new_back);
             //$('#old_back').val("#q2-female");
             old_back.push("#q2-female");
          }
