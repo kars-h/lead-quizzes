@@ -134,7 +134,7 @@ var answers = [
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile B (with warning)");
             
-            alert($('#q2-female  > .button_wrappler  > .choice-wrapper > .btn').val());
+            alert($(this).val());
             //$('#old_back').val("#q2-female");
             old_back.push("#q2-female");
          }
