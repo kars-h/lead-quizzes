@@ -127,14 +127,16 @@ var answers = [
 
     $('#q2-female  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
         var answer = $(this).attr("data-m1");
-
+        console.log($(this));
+        
         if (answer == "A") {
             $('#q2-female').fadeOut(500);
             $('#rtwo').delay(1100).fadeIn(500);
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile B (with warning)");
             
-            alert($(this).val());
+            
+            $("#q1 > .button_wrappler  > .choice-wrapper > .btn").val();
             //$('#old_back').val("#q2-female");
             old_back.push("#q2-female");
          }
