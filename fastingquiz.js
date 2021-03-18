@@ -49,23 +49,29 @@ var new_back = [
         var old_back_lengtharray = old_back.length - 1 ;
         var new_back_lengtharray = new_back.length - 1 ;
         
-        alert("old_back: "+old_back[old_back_lengtharray]);
+       /* alert("old_back: "+old_back[old_back_lengtharray]);
         alert("old_back2: "+old_back[old_back_lengtharray - 1]);
         
         alert("new_back: "+new_back[new_back_lengtharray]);
-        alert("new_back2: "+new_back[new_back_lengtharray - 1]);
+        alert("new_back2: "+new_back[new_back_lengtharray - 1]);*/
 
+        alert("old_back: "+old_back);
+        alert("new_back: "+new_back);
+        
         old_back.pop();
         new_back.pop();
 
         var old_back_lengtharray = old_back.length - 1 ;
         var new_back_lengtharray = new_back.length - 1 ;
         
-         alert("old_back: "+old_back[old_back_lengtharray]);
+        alert("popped old_back: "+old_back);
+        alert("popped new_back: "+new_back);
+        
+        /* alert("old_back: "+old_back[old_back_lengtharray]);
         alert("old_back2: "+old_back[old_back_lengtharray - 1]);
         
         alert("new_back: "+new_back[new_back_lengtharray]);
-        alert("new_back2: "+new_back[new_back_lengtharray - 1]);
+        alert("new_back2: "+new_back[new_back_lengtharray - 1]);*/
     }); 
     
     
