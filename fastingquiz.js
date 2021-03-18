@@ -35,6 +35,9 @@ var old_back = [
 var new_back = [
    
 ];
+var answers = [
+   
+];
 
 //breid uit door voor alle vragen die je beantwoordt de waardes op te slaan, wat ook misschien makkelijker maakt om naar ac te sturen
     $('.back-button').click(function() {
@@ -105,7 +108,7 @@ var new_back = [
             
             old_back.push("#q1");
             new_back.push("#q2-male");
-
+            //answers.push()
  
         }
         if (answer == "Female") {
@@ -131,7 +134,7 @@ var new_back = [
             $('#form1').delay(1100).fadeIn(500);
             $('#profile_res').val("Profile B (with warning)");
             
-            alert(new_back);
+            alert($(this).val());
             //$('#old_back').val("#q2-female");
             old_back.push("#q2-female");
          }
