@@ -55,8 +55,8 @@ var new_back = [
         alert("new_back: "+new_back[new_back_lengtharray]);
         alert("new_back2: "+new_back[new_back_lengtharray - 1]);*/
 
-        alert("old_back: "+old_back);
-        alert("new_back: "+new_back);
+       /* alert("old_back: "+old_back);
+        alert("new_back: "+new_back);*/
         
         $(new_back[new_back_lengtharray]).fadeOut(500);
         $(old_back[old_back_lengtharray]).delay(600).fadeIn(500);
