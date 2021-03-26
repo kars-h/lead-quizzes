@@ -1,6 +1,6 @@
 // add variables
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     var answers = [];
     var meta = [];
@@ -14,342 +14,342 @@ $(document).ready(function () {
 
     // $(".btn").on("click", function () {
 
-
-
     //var meta2 = $(this).attr("data-m2");
 
     //meta.push(meta1, meta2);
 
     //logic(answer)
 
-
-   // console.log(meta);
+    // console.log(meta);
     //add blocks to add variables
 
     //});
 
     // function logic(answer) {
-var old_back = [
-   
-];
-var new_back = [
-   
-];
-var answers = [
-   
-];
+    var old_back = [];
+    var new_back = [];
+    var answers = [];
 
-//breid uit door voor alle vragen die je beantwoordt de waardes op te slaan, wat ook misschien makkelijker maakt om naar ac te sturen
+    var progressObject = {
+        "#q1": "20%",
+        "#q2-female": "30%",
+        "#q3-female": "40%",
+        "#q4-female": "70%",
+        "#q2-male": "50%",
+        "#q3-male": "65%",
+        "#q4-male": "75%",
+        "#result": "100%"
+
+    };
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue"
+    };
+
+    //breid uit door voor alle vragen die je beantwoordt de waardes op te slaan, wat ook misschien makkelijker maakt om naar ac te sturen
     $('.back-button').click(function() {
-        
-        
-        
-        var old_back_lengtharray = old_back.length - 1 ;
-        var new_back_lengtharray = new_back.length - 1 ;
-        
-        
-        
+        var old_back_lengtharray = old_back.length - 1;
+        var new_back_lengtharray = new_back.length - 1;
+
+        var position = old_back[old_back_lengtharray];
+        console.log("position = ", position)
+        var progressObjectNewValue = progressObject[position];
+        //bv. 30%
+        console.log(progressObjectNewValue);
+
+        // $('#progress-percentage').show();
+        $('#progress-percentage').text(progressObjectNewValue);
+        $('#progress-bar').width(progressObjectNewValue);
+
         $(new_back[new_back_lengtharray]).fadeOut(500);
         $(old_back[old_back_lengtharray]).delay(600).fadeIn(500);
-        
+
+        // console.log(old_back[old_back_lengtharray]);
+
         old_back.pop();
         new_back.pop();
 
-       
-    }); 
-    
-    
-    
+    });
 
+    // when button is pressed, check id and change progress bar
+    $('.btn').click(function() {
+        setTimeout(function() {
+            var currentVisibleDiv = $('.question:visible').attr('id');
+            console.log("*** current div visible =", currentVisibleDiv);
+            var currentQuestion = ("#" + currentVisibleDiv);
+            //console.log("currentQuestion ", currentQuestion);
+            // console.log("progressobject: ", progressObject);
+            console.log("progressObject[currentQuestion]) || % of current quesiton: ", progressObject[currentQuestion]);
+            $('#progress-bar').width(progressObject[currentQuestion]);
+            $('#progress-percentage').text(progressObject[currentQuestion]);
+        }, 1001);
+
+    });
     //fades in out
 
-    $('.div-block-11 > .btnintro').click(function () {
+    $('.div-block-11 > .btnintro').click(function() {
 
-       // var answer = $(this).attr("data-m1");
+        // var answer = $(this).attr("data-m1");
 
         $('#intro').fadeOut(500);
         $('#q1').delay(600).fadeIn(500);
     });
 
-     $('#q1 > .button_wrappler  > .choice-wrapper > .btn').click(function () {
+    $('#q1 > .button_wrappler  > .choice-wrapper > .btn').click(function() {
 
         var answer = $(this).attr("data-m1");
 
         if (answer == "Male") {
             $('#q1').fadeOut(500);
             $('#q2-male').delay(600).fadeIn(500);
-            
+
             $('#profile_gender').val("M");
-            
+
             $('#body_weight').val("");
             $('#post_menopausal').val("");
             $('#menstrual_cycle_normal').val("");
 
-            
-            
-            
-           /* $('#old_back').val("#q1");
+            /* $('#old_back').val("#q1");
             $('#new_back').val("#q2-male");*/
-            
+
             old_back.push("#q1");
             new_back.push("#q2-male");
             //answers.push()
- 
+
         }
         if (answer == "Female") {
             $('#q1').fadeOut(500);
             $('#q2-female').delay(600).fadeIn(500);
-            
+
             $('#profile_gender').val("F");
-            
+
             $('#talk_schedule').val("");
             $('#fasted_before').val("");
             $('#how_fastfast_sound').val("");
 
-            
-         /*   $('#old_back').val("#q1");
+            /*   $('#old_back').val("#q1");
             $('#new_back').val("#q2-female");*/
-            
+
             old_back.push("#q1");
             new_back.push("#q2-female");
         }
     });
 
-    $('#q2-female  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
+    $('#q2-female  > .button_wrappler  > .choice-wrapper > .btn').click(function() {
         var answer = $(this).attr("data-m1");
-        
+
         var answer_send = $(this).text();
         $('#body_weight').val(answer_send);
-        
-        
-        
+
         if (answer == "A") {
             $('#q2-female').fadeOut(500);
-            $('#rtwo').delay(1100).fadeIn(500);
-            $('#form1').delay(1100).fadeIn(500);
+            $('#rtwo').delay(600).fadeIn(500);
+            $('#result').delay(600).fadeIn(500);
             $('#profile_res').val("Profile B (with warning)");
-            
-            
+
             $("#q1 > .button_wrappler  > .choice-wrapper > .btn").val();
             //$('#old_back').val("#q2-female");
             old_back.push("#q2-female");
-         }
+        }
         if (answer == "B") {
             $('#q2-female').fadeOut(500);
             $('#q4-female').delay(600).fadeIn(500);
-            
-            
+
             /*$('#old_back').val("#q2-female");
             $('#new_back').val("#q4-female");*/
-            
+
             old_back.push("#q2-female");
             new_back.push("#q4-female");
         }
         if (answer == "C") {
             $('#q2-female').fadeOut(500);
             $('#q3-female').delay(600).fadeIn(500);
-             
+
             /*$('#old_back').val("#q2-female");
             $('#new_back').val("#q3-female");*/
-            
+
             old_back.push("#q2-female");
             new_back.push("#q3-female");
         }
     });
-    $('#q2-male  > .button_wrappler  > .btn').click(function () {
+    $('#q2-male  > .button_wrappler  > .btn').click(function() {
         var answer = $(this).attr("data-m1");
 
         var answer_send = $(this).text();
         $('#talk_schedule').val(answer_send);
-        
+
         if (answer == "A") {
             $('#q2-male').fadeOut(500);
             $('#q3-male').delay(600).fadeIn(500);
-            /*$('#rfour').delay(1100).fadeIn(500);
-            $('#form1').delay(1100).fadeIn(500);
+            /*$('#rfour').delay(600).fadeIn(500);
+            $('#result').delay(600).fadeIn(500);
             $('#profile_res').val("Profile C");*/
-            
-          
-            
+
             /*$('#old_back').val("#q2-male");
             $('#new_back').val("#q3-male");*/
-            
+
             old_back.push("#q2-male");
             new_back.push("#q3-male");
         }
         if (answer == "B") {
             $('#q2-male').fadeOut(500);
             $('#q3-male').delay(600).fadeIn(500);
-            /*$('#rfour').delay(1100).fadeIn(500);
-            $('#form1').delay(1100).fadeIn(500);
+            /*$('#rfour').delay(600).fadeIn(500);
+            $('#result').delay(600).fadeIn(500);
             $('#profile_res').val("Profile C");*/
-            
-            
-            
-           /* $('#old_back').val("#q2-male");
+
+            /* $('#old_back').val("#q2-male");
             $('#new_back').val("#q3-male");*/
-            
+
             old_back.push("#q2-male");
             new_back.push("#q3-male");
         }
         if (answer == "C") {
             $('#q2-male').fadeOut(500);
             //$('#q3-male').delay(600).fadeIn(500);
-            $('#rfour').delay(1100).fadeIn(500);
-            $('#form1').delay(1100).fadeIn(500);
+            $('#rfour').delay(600).fadeIn(500);
+            $('#result').delay(600).fadeIn(500);
             $('#profile_res').val("Profile C");
-            
-             
+
             //$('#old_back').val("#q2-male");
-            
+
             old_back.push("#q2-male");
-         }
+        }
     });
 
-    $('#q3-male  > .button_wrappler  > .btn').click(function () {
+    $('#q3-male  > .button_wrappler  > .btn').click(function() {
         var answer = $(this).attr("data-m1");
 
-         var answer_send = $(this).text();
+        var answer_send = $(this).text();
         $('#fasted_before').val(answer_send);
-        
+
         if (answer == "A") {
             $('#q3-male').fadeOut(500);
-            $('#rfive').delay(1100).fadeIn(500);
-            $('#form1').delay(1100).fadeIn(500);
+            $('#rfive').delay(600).fadeIn(500);
+            $('#result').delay(600).fadeIn(500);
             $('#profile_res').val("Profile A");
-            
-             
+
             //$('#old_back').val("#q3-male");
-            
+
             old_back.push("#q3-male");
 
-         }
+        }
         if (answer == "B") {
             $('#q3-male').fadeOut(500);
             $('#q4-male').delay(600).fadeIn(500);
-            
-       
-            
+
             /*$('#old_back').val("#q3-male");
             $('#new_back').val("#q4-male");*/
-            
+
             old_back.push("#q3-male");
             new_back.push("#q4-male");
         }
         if (answer == "C") {
             $('#q3-male').fadeOut(500);
             $('#q4-male').delay(600).fadeIn(500);
-            
-        
-            
+
             /*$('#old_back').val("#q3-male");
             $('#new_back').val("#q4-male");*/
-            
+
             old_back.push("#q3-male");
             new_back.push("#q4-male");
         }
     });
 
-    $('#q4-male  > .button_wrappler > .btn').click(function () {
+    $('#q4-male  > .button_wrappler > .btn').click(function() {
         var answer = $(this).attr("data-m1");
 
-         var answer_send = $(this).text();
+        var answer_send = $(this).text();
         $('#how_fastfast_sound').val(answer_send);
-        
+
         if (answer == "A") {
             $('#q4-male').fadeOut(500);
-            $('#rfour').delay(1100).fadeIn(500);
-            $('#form1').delay(1100).fadeIn(500);
+            $('#rfour').delay(600).fadeIn(500);
+            $('#result').delay(600).fadeIn(500);
             $('#profile_res').val("Profile C");
-            
-             
+
             //$('#old_back').val("#q4-male");
-            
+
             old_back.push("#q4-male");
-          }
+        }
         if (answer == "B") {
             $('#q4-male').fadeOut(500);
-            $('#rsix').delay(1100).fadeIn(500);
-            $('#form1').delay(1100).fadeIn(500);
+            $('#rsix').delay(600).fadeIn(500);
+            $('#result').delay(600).fadeIn(500);
             $('#profile_res').val("Profile D");
-            
+
             // $('#old_back').val("#q4-male");
             old_back.push("#q4-male");
 
-         }
+        }
         if (answer == "C") {
             $('#q4-male').fadeOut(500);
-            $('#rsix').delay(1100).fadeIn(500);
-            $('#form1').delay(1100).fadeIn(500);
+            $('#rsix').delay(600).fadeIn(500);
+            $('#result').delay(600).fadeIn(500);
             $('#profile_res').val("Profile D");
-            
+
             // $('#old_back').val("#q4-male");
-             old_back.push("#q4-male");
+            old_back.push("#q4-male");
 
         }
     });
 
-
-    $('#q3-female  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
+    $('#q3-female  > .button_wrappler  > .choice-wrapper > .btn').click(function() {
         var answer = $(this).attr("data-m1");
-        
+
         var answer_send = $(this).text();
         $('#post_menopausal').val(answer_send);
 
         if (answer == "Yes") {
             $('#q3-female').fadeOut(500);
             $('#q2-male').delay(600).fadeIn(500);
-            
-            
-            
+
             /*$('#old_back').val("#q3-female");
             $('#new_back').val("#q2-male");*/
-            
+
             old_back.push("#q3-female");
             new_back.push("#q2-male");
         }
         if (answer == "No") {
             $('#q3-female').fadeOut(500);
             $('#q4-female').delay(600).fadeIn(500);
-            
-             
-            
-           /* $('#old_back').val("#q3-female");
+
+            /* $('#old_back').val("#q3-female");
             $('#new_back').val("#q4-female");*/
-            
+
             old_back.push("#q3-female");
             new_back.push("#q4-female");
         }
     });
 
-    $('#q4-female  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
+    $('#q4-female  > .button_wrappler  > .choice-wrapper > .btn').click(function() {
         var answer = $(this).attr("data-m1");
-        
+
         var answer_send = $(this).text();
         $('#menstrual_cycle_normal').val(answer_send);
 
         if (answer == "Yes") {
             $('#q4-female').fadeOut(500);
-            $('#rthree').delay(1100).fadeIn(500);
-            $('#form1').delay(1100).fadeIn(500);
+            $('#rthree').delay(600).fadeIn(500);
+            $('#result').delay(600).fadeIn(500);
             $('#profile_res').val("Profile B");
-            
-             
-           // $('#old_back').val("#q4-female");
-             old_back.push("#q4-female");
+
+            // $('#old_back').val("#q4-female");
+            old_back.push("#q4-female");
 
         }
         if (answer == "No") {
             $('#q4-female').fadeOut(500);
-            $('#rtwo').delay(1100).fadeIn(500);
-            $('#form1').delay(1100).fadeIn(500);
+            $('#rtwo').delay(600).fadeIn(500);
+            $('#result').delay(600).fadeIn(500);
             $('#profile_res').val("Profile B (with warning)");
-            
-             
+
             //$('#old_back').val("#q4-female");
             old_back.push("#q4-female");
 
-         }
+        }
     });
 
     /*$('#q5  > .button_wrappler  > .choice-wrapper > .btn').click(function () {
@@ -384,7 +384,7 @@ var answers = [
     });*/
 
     //add questions
-/*
+    /*
     $('#calc  > .submit').click(function () {
         $('#calc').fadeOut(500);
         $('#results').delay(600).fadeIn(500);
@@ -393,13 +393,12 @@ var answers = [
 
     // Restart button
 
-    $('.restart').click(function () {
+    $('.restart').click(function() {
         location.reload();
     });
 
-
     //START RESULTS DISPLAY
-/*
+    /*
     $('#calc .submit').click(function () {
 
         $('#calc').fadeOut(1000);
@@ -438,7 +437,7 @@ var answers = [
             delete obj[maxName];
             i++;
         }*/
-        /*
+    /*
                 function whichIsTheGreatestTHIRD(obj) {
         
                     var max = -Infinity; // calling Math.max with no arguments returns -Infinity
@@ -496,23 +495,21 @@ var answers = [
         
         */
 
-       /* if (results.indexOf("One") > -1) {
-            $('#rone').delay(1100).fadeIn(500);
+    /* if (results.indexOf("One") > -1) {
+            $('#rone').delay(600).fadeIn(500);
         } if (results.indexOf("Two") > -1) {
-            $('#rtwo').delay(1100).fadeIn(500);
+            $('#rtwo').delay(600).fadeIn(500);
         } if (results.indexOf("Three") > -1) {
-            $('#rthree').delay(1100).fadeIn(500);
+            $('#rthree').delay(600).fadeIn(500);
         } if (results.indexOf("Four") > -1) {
-            $('#rfour').delay(1100).fadeIn(500);
+            $('#rfour').delay(600).fadeIn(500);
         } if (results.indexOf("Five") > -1) {
-            $('#rfive').delay(1100).fadeIn(500);
+            $('#rfive').delay(600).fadeIn(500);
         }
         //add variables add results
-        $('#rintro').delay(1100).fadeIn(500);*/
-
+        $('#rintro').delay(600).fadeIn(500);*/
 
     //});
-
 
 });
 
